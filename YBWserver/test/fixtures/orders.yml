@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  problem_id: 1
+  importance_id: 1
+  comment_id: 1
+  platform_id: 1
+  status: false
+
+two:
+  user_id: 1
+  problem_id: 1
+  importance_id: 1
+  comment_id: 1
+  platform_id: 1
+  status: false

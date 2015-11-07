@@ -1,4 +1,6 @@
 YBWserver::Application.routes.draw do
+  resources :orders
+
   resources :comments
 
   resources :platforms
