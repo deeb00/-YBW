@@ -9,11 +9,26 @@ class Order < ActiveRecord::Base
   def as_json(options={})
     super(:only => [:user,:problem,:importance,:comment,:platform],
           :include => {
-              :user => {:only => [:name,:phone]},
-              :problem => {:only => [:value]},
-              :importance => {:only => [:value]},
-              :comment => {:only => [:value]},
-              :platform => {:only => [:value]},
+              :user => {
+                  :only => [:name,:phone,:rating],
+                  :include => {
+                      :rating => {
+                          :only =>[:value]
+                      }
+                  }
+              },
+              :problem => {
+                  :only => [:value]
+              },
+              :importance => {
+                  :only => [:value]
+              },
+              :comment => {
+                  :only => [:value]
+              },
+              :platform => {
+                  :only => [:value]
+              }
           }
     )
   end
